@@ -1,0 +1,66 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+/* Filled tan button (hero) */
+.btn--solid {
+  padding: 1.1rem 2.1rem;
+  background-color: var(--tan-500);
+  color: var(--on-dark);
+  font-size: 0.78rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.btn--solid:hover {
+  background-color: #a77753;
+}
+
+/* Outlined button (header + story) */
+.btn--outline {
+  padding: 0.72rem 1.6rem;
+  border-color: rgba(185, 139, 102, 0.85);
+  color: var(--on-dark);
+  font-size: 0.95rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.btn--outline:hover {
+  background-color: rgba(185, 139, 102, 0.16);
+}
+
+/* Outline on the cream paper */
+.btn--outline-dark {
+  padding: 0.85rem 1.9rem;
+  border-color: var(--tan-600);
+  color: var(--ink);
+}
+
+.btn--outline-dark:hover {
+  background-color: rgba(138, 90, 55, 0.12);
+}
+
+/* Arrow icon (light by default, dark variant on cream buttons) */
+.icon-arrow {
+  display: inline-block;
+  width: 1.15em;
+  height: 1.15em;
+  background: url('../assets/icons/arrow-light.svg') center / contain no-repeat;
+}
+
+.btn--outline-dark .icon-arrow {
+  background-image: url('../assets/icons/arrow-dark.svg');
+}

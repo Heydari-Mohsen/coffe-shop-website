@@ -1,0 +1,63 @@
+/* Faint line drawings of coffee things in the corners of the cream paper */
+.doodle {
+  position: absolute;
+  z-index: 0;
+  width: clamp(90px, 10.5vw, 160px);
+  height: auto;
+  opacity: 0.2;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* top-left: coffee branch growing from the corner */
+.doodle--branch-tl {
+  top: calc(0px + 10px);
+  left: -1.2%;
+  transform: scaleY(-1);
+}
+
+/* top-right: cup with steam */
+.doodle--cup-tr {
+  top: 14px;
+  right: 1%;
+  width: clamp(80px, 9vw, 140px);
+}
+
+.doodle--beans-tr {
+  top: clamp(120px, 12vw, 170px);
+  right: 2%;
+  width: clamp(64px, 6.5vw, 100px);
+  transform: rotate(8deg);
+}
+
+/* bottom-left: branch growing out of the corner + a few beans */
+.doodle--branch-bl {
+  bottom: calc(var(--torn-h) + 6px);
+  left: -1.2%;
+}
+
+.doodle--beans-bl {
+  bottom: calc(var(--torn-h) + 10px);
+  left: clamp(110px, 12.5vw, 190px);
+  width: clamp(64px, 6.5vw, 100px);
+  transform: rotate(-10deg);
+}
+
+/* bottom-right: moka pot */
+.doodle--moka-br {
+  bottom: calc(var(--torn-h) + 6px);
+  right: 1.5%;
+  width: clamp(76px, 8.2vw, 126px);
+}
+
+/* On narrow screens, keep them smaller and fainter so text stays clean */
+@media (max-width: 960px) {
+  .doodle {
+    opacity: 0.13;
+  }
+
+  .doodle--beans-tr,
+  .doodle--beans-bl {
+    display: none;
+  }
+}

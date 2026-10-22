@@ -1,0 +1,65 @@
+.features {
+  padding-block: clamp(3rem, 5vw, 4.5rem) clamp(2.5rem, 4vw, 3.5rem);
+}
+
+.features__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.feature {
+  position: relative;
+  padding: 0.5rem 1.25rem;
+  text-align: center;
+}
+
+/* Torn hairline between columns */
+.feature:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 8%;
+  right: 0;
+  width: 6px;
+  height: 84%;
+  background: url('../assets/edges/torn-line-v-dark.svg') center / 100% 100% no-repeat;
+  opacity: 0.55;
+}
+
+.feature__icon {
+  margin: 0 auto 1rem;
+}
+
+.feature__title {
+  font-size: 1.05rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: var(--ink);
+}
+
+.feature__text {
+  margin-top: 0.45rem;
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 900px) {
+  .features__list {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 2.5rem;
+  }
+
+  .feature:nth-child(2)::after {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .features__list {
+    grid-template-columns: 1fr;
+  }
+
+  .feature::after {
+    display: none;
+  }
+}

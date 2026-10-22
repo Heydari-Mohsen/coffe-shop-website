@@ -1,0 +1,62 @@
+.story {
+  padding-block: clamp(2rem, 3vw, 2.5rem) calc(var(--torn-h) + clamp(4rem, 7vw, 6.5rem));
+}
+
+.story__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(2.5rem, 7vw, 7rem);
+}
+
+/* Photo with torn-paper edges and a tan "[" bracket on its left */
+.story__media {
+  position: relative;
+  max-width: 480px;
+  margin-left: 2rem;
+}
+
+.story__media::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -2rem;
+  width: 2.1rem;
+  background: url('../assets/edges/bracket.svg') center / 100% 100% no-repeat;
+}
+
+.story__image {
+  width: 100%;
+  aspect-ratio: 400 / 370;
+  object-fit: cover;
+  clip-path: url(#torn-photo); /* torn-paper outline, defined inline in index.html */
+}
+
+.story__title {
+  margin-top: 1.1rem;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.4vw, 2.8rem);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--ink);
+}
+
+.story__text {
+  margin-top: 1.6rem;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  line-height: 1.85;
+  color: #3d2c20;
+}
+
+@media (max-width: 860px) {
+  .story__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .story__media {
+    margin-inline: 2rem auto;
+    max-width: 440px;
+  }
+}

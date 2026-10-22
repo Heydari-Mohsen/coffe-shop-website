@@ -1,0 +1,28 @@
+/* The cream "paper" area that holds features + story.
+   Its top edge is torn and drawn over the bottom of the hero photo. */
+.paper {
+  position: relative;
+  z-index: 1;
+  background-color: var(--cream-200);
+  background-image: url('../assets/images/paper-texture.svg');
+  color: var(--ink);
+}
+
+.paper::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: var(--torn-h);
+  transform: translateY(calc(-100% + 1px));
+  background: url('../assets/edges/torn-cream.svg') 0 100% / 100% 100% no-repeat;
+  filter: drop-shadow(0 -4px 5px rgba(0, 0, 0, 0.45));
+  pointer-events: none;
+}
+
+/* Content sits above the doodles */
+.paper > section {
+  position: relative;
+  z-index: 1;
+}

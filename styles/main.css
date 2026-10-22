@@ -1,0 +1,12 @@
+/* Entry stylesheet: only imports. Each section lives in its own file. */
+@import './variables.css';
+@import './base.css';
+@import './buttons.css';
+@import './header.css';
+@import './hero.css';
+@import './paper.css';
+@import './doodles.css';
+@import './features.css';
+@import './story.css';
+@import './footer.css';
+@import './main-menu.css';

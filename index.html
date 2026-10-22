@@ -1,0 +1,245 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="./assets/icons/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Mrs+Saint+Delafield&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/main.css" />
+  </head>
+
+  <body>
+    <header class="site-header" id="site-header">
+      <div class="container site-header__inner">
+        <a class="logo" href="#home" aria-label="cafe website">
+          <img class="logo__icon" src="./assets/icons/logo-bean.svg" alt="" width="26" height="26" />
+          <span class="logo__text">cafe website</span>
+        </a>
+
+        <nav class="nav" id="primary-nav" aria-label="Main navigation">
+          <ul class="nav__list">
+            <li><a class="nav__link" href="#home" aria-current="page">Home</a></li>
+            <li><a class="nav__link" href="#menu">Menu</a></li>
+            <li><a class="nav__link" href="#about">About</a></li>
+            <li><a class="nav__link" href="#gallery">Gallery</a></li>
+            <li><a class="nav__link" href="#contact">Contact</a></li>
+            <li class="nav__cta-item"><a class="btn btn--outline" href="#order">Order Now</a></li>
+          </ul>
+        </nav>
+
+        <a class="btn btn--outline site-header__cta" href="#order">Order Now</a>
+
+ 
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="container hero__inner">
+          <div class="hero__content">
+            <p class="eyebrow">Premium Coffee Experience</p>
+            <h1 class="hero__title">
+              <span class="hero__title-main">Coffee<br />Shop</span>
+              <span class="hero__title-script">good cafe good life</span>
+            </h1>
+            <p class="hero__lead">
+              Get 20% off our top 3 most-loved<br class="br-desktop" />
+              drinks. Find your new favorite!
+            </p>
+            <a class="btn btn--solid" href="#order">
+              Order Now <span class="icon-arrow" aria-hidden="true"></span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <div class="paper">
+        <img class="doodle doodle--branch-tl" src="./assets/doodles/coffee-branch.svg" alt="" aria-hidden="true" />
+        <img class="doodle doodle--cup-tr" src="./assets/doodles/coffee-cup.svg" alt="" aria-hidden="true" />
+        <img class="doodle doodle--branch-bl" src="./assets/doodles/coffee-branch.svg" alt="" aria-hidden="true" />
+        <img class="doodle doodle--moka-br" src="./assets/doodles/moka-pot.svg" alt="" aria-hidden="true" />
+        <img class="doodle doodle--beans-bl" src="./assets/doodles/coffee-beans.svg" alt="" aria-hidden="true" />
+        <img class="doodle doodle--beans-tr" src="./assets/doodles/coffee-beans.svg" alt="" aria-hidden="true" />
+        
+        <section class="features" id="menu" aria-label="Why Brew &amp; Bean">
+          <ul class="container features__list">
+            <li class="feature">
+              <img class="feature__icon" src="./assets/icons/bean.svg" alt="" width="40" height="40" />
+              <h2 class="feature__title">Premium Beans</h2>
+              <p class="feature__text">Only the finest beans<br />from around the world.</p>
+            </li>
+            <li class="feature">
+              <img class="feature__icon" src="./assets/icons/cup.svg" alt="" width="40" height="40" />
+              <h2 class="feature__title">Expert Baristas</h2>
+              <p class="feature__text">Crafted with passion<br />and precision.</p>
+            </li>
+            <li class="feature">
+              <img class="feature__icon" src="./assets/icons/leaf.svg" alt="" width="40" height="40" />
+              <h2 class="feature__title">Fresh &amp; Natural</h2>
+              <p class="feature__text">No additives, just<br />pure coffee.</p>
+            </li>
+            <li class="feature">
+              <img class="feature__icon" src="./assets/icons/heart.svg" alt="" width="40" height="40" />
+              <h2 class="feature__title">Cozy Atmosphere</h2>
+              <p class="feature__text">A perfect place for<br />good vibes.</p>
+            </li>
+          </ul>
+        </section>
+     
+
+        
+
+<section class="main-menu">
+    <div class="main-menu-list" id="mainmenulist">
+        <article class="menu-card">
+      <img class="main-menu-image"
+           src="assets/images/classicburger.jpg"
+           alt="Classic Burger">
+
+      <div class="menu-card-info">
+        <h3>Classic Burger</h3>
+        <p class="menu-price">$500.000T</p>
+        <p class="menu-ingredients">
+          <strong>Ingredients:</strong>
+        80% beef, bread, cheese, lettuce, tomato and special sauce
+        </p>
+        <button class="add-to-cart"
+                data-name="Classic Burger"
+                data-price="500000">
+          Add to cart
+        </button>
+      </div>
+    </article>
+
+
+        <article class="menu-card">
+      <img class="main-menu-image"
+           src="assets/images/French Fries.png"
+           alt="French Fries">
+
+      <div class="menu-card-info">
+        <h3>French Fries</h3>
+        <p class="menu-price">$250.000T</p>
+        <p class="menu-ingredients">
+          <strong>Ingredients:</strong>
+          Potatoes, salt and spices
+        </p>
+        <button class="add-to-cart"
+                data-name="French Fries"
+                data-price="250000">
+          Add to cart
+        </button>
+      </div>
+    </article>
+
+          <article class="menu-card">
+      <img class="main-menu-image"
+           src="assets/images/Chicken Sandwich.png"
+           alt="Chicken Sandwich">
+
+      <div class="menu-card-info">
+        <h3>Chicken Sandwich</h3>
+        <p class="menu-price">$490.000T</p>
+        <p class="menu-ingredients">
+          <strong>Ingredients:</strong>
+          Chicken, bread, lettuce, tomato and sauce
+        </p>
+        <button class="add-to-cart"
+                data-name="Chicken Sandwich"
+                data-price="490000">
+          Add to cart
+        </button>
+      </div>
+    </article>
+
+        <article class="menu-card">
+      <img class="main-menu-image"
+           src="assets/images/hotdog.png"
+           alt="Hot Dog">
+
+      <div class="menu-card-info">
+        <h3>Hot Dog</h3>
+        <p class="menu-price">$450.000T</p>
+        <p class="menu-ingredients">
+          <strong>Ingredients:</strong>
+          Sausage, bread, pickles and sauce
+        </p>
+        <button class="add-to-cart"
+                data-name="Hot Dog"
+                data-price="450000">
+          Add to cart
+        </button>
+      </div>
+    </article>
+
+  </div>
+
+  <button class="main-menu-button"
+          id="mainmenubutton"
+          aria-expanded="false">
+    MORE ↓
+  </button>
+</section>
+
+<section class="shopping-cart">
+  <h2>سبد خرید</h2>
+  <ul id="cart-items"></ul>
+  <p>مجموع: <span id="cart-total">۰</span> تومان</p>
+</section>
+
+
+
+        
+        <section class="story" id="about">
+          <div class="container story__inner">
+            <figure class="story__media">
+              <img
+                class="story__image"
+                src="./assets/images/beans.jpg"
+                alt="Roasted coffee beans in a dark bowl on a rustic table"
+                width="774"
+                height="714"
+                loading="lazy"
+              />
+            </figure>
+
+            <div class="story__content">
+              <p class="eyebrow eyebrow--dark">Our Story</p>
+              <h2 class="story__title">More Than Just Coffee</h2>
+              <p class="story__text">
+                We believe coffee is more than a drink —<br class="br-desktop" />
+                it's a moment, a feeling, a connection.<br class="br-desktop" />
+                Our café is a place where great taste<br class="br-desktop" />
+                meets a warm atmosphere, bringing people<br class="br-desktop" />
+                together one cup at a time.
+              </p>
+              <a class="btn btn--outline btn--outline-dark" href="#about">
+                Learn More <span class="icon-arrow" aria-hidden="true"></span>
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer" id="contact">
+      <div class="container site-footer__inner">
+        <div class="site-footer__divider" aria-hidden="true">
+          <span class="site-footer__line"></span>
+          <img src="./assets/icons/divider-bean.svg" alt="" width="18" height="18" />
+          <span class="site-footer__line"></span>
+        </div>
+        <p class="site-footer__tagline">Good Coffee <span aria-hidden="true">•</span> Good Mood</p>
+      <p class="site-footer_me_info">made by mohsen heydari</p>
+      </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>

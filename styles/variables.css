@@ -1,0 +1,37 @@
+/* Design tokens. If you change a colour here, the torn-edge SVGs in
+   src/assets/edges use the same hex values (torn-cream = --cream-200,
+   torn-coffee = --coffee-900). */
+:root {
+  /* Coffee (dark) */
+  --coffee-950: #0f0a07;
+  --coffee-900: #140e09;
+  --coffee-800: #1f1610;
+  --coffee-700: #3a2a20;
+
+  /* Tan accents */
+  --tan-600: #8a5a37; /* text/icons on cream */
+  --tan-500: #936444; /* solid button */
+  --tan-400: #b98b66; /* accents on dark */
+
+  /* Cream paper */
+  --cream-100: #f8f2ea;
+  --cream-200: #ece0d4;
+  --cream-300: #e2d3c3;
+
+  /* Text */
+  --ink: #1a110b;
+  --ink-soft: #6a5444;
+  --on-dark: #fdfaf5;
+  --on-dark-soft: #b7a494;
+
+  /* Fonts */
+  --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-script: 'Mrs Saint Delafield', 'Snell Roundhand', 'Brush Script MT', cursive;
+  --font-body: 'Jost', 'Helvetica Neue', Arial, sans-serif;
+
+  /* Layout */
+  --container: 1200px;
+  --gutter: 1.5rem;
+  --header-h: 78px;
+  --torn-h: clamp(28px, 3.4vw, 50px);
+}

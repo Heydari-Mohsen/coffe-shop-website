@@ -1,0 +1,100 @@
+.hero {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  min-height: clamp(660px, 68vw, 880px);
+  padding-block: calc(var(--header-h) + 2rem) calc(var(--torn-h) + 3rem);
+  background-color: var(--coffee-950);
+  overflow: hidden;
+}
+
+/* Espresso photo on the right, melting into the dark background */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  aspect-ratio: 1168 / 1492; /* same ratio as hero.jpg, so the whole photo stays visible */
+  max-width: 70%;
+  background: url('../assets/images/hero.jpg') right bottom / cover no-repeat;
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 45%),
+    linear-gradient(to bottom, transparent 0, #000 16%);
+  mask-image: linear-gradient(to right, transparent 0, #000 45%),
+    linear-gradient(to bottom, transparent 0, #000 16%);
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+}
+
+/* Soft shade behind the text so it stays readable */
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(15, 10, 7, 0.72) 0%, rgba(15, 10, 7, 0) 52%);
+  pointer-events: none;
+}
+
+.hero__inner {
+  position: relative;
+  z-index: 1;
+}
+
+.hero__content {
+  max-width: 34rem;
+}
+
+.hero__title {
+  margin-top: 1.4rem;
+  font-weight: 600;
+}
+
+.hero__title-main {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(3.4rem, 7.4vw, 7.2rem);
+  font-weight: 600;
+  line-height: 0.98;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: var(--on-dark);
+}
+
+.hero__title-script {
+  display: block;
+  margin-top: -0.05em;
+  font-family: var(--font-script);
+  font-size: clamp(3.4rem, 7.8vw, 7.6rem); /* tweak here if the script font looks too big/small */
+  font-weight: 400;
+  line-height: 1;
+  color: var(--tan-400);
+  white-space: nowrap;
+  transform: rotate(-3deg);
+  transform-origin: left center;
+}
+
+.hero__lead {
+  margin-top: 1.8rem;
+  font-size: clamp(1.05rem, 1.7vw, 1.3rem);
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--on-dark);
+}
+
+.hero .btn--solid {
+  margin-top: 2.2rem;
+}
+
+@media (max-width: 820px) {
+  .hero::before {
+    width: 100%;
+    max-width: none;
+    aspect-ratio: auto;
+    opacity: 0.5;
+  }
+
+  .hero::after {
+    background: linear-gradient(90deg, rgba(15, 10, 7, 0.65) 0%, rgba(15, 10, 7, 0.2) 100%);
+  }
+}
